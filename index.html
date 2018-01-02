@@ -1,345 +1,341 @@
-<html style="" class=" js no-touch csstransforms3d csstransitions js no-touch csstransforms3d csstransitions">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>CakePHP Tutorial</title>
-    <link rel="stylesheet" href="css/style-min.css">
-    <link rel="stylesheet" href="https://www.tutorialspoint.com/theme/css/style-min.css">
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
 </head>
 
-<body onload="prettyPrint()" style="">
-    <div id="bukket-ext-recorder-layer" style="display: none;">
-        <div id="bukket-ext-recorder-shadow-top" class="bukket-ext-recorder-shadow" style="height: 393px;"></div>
-        <div id="bukket-ext-recorder-shadow-right" class="bukket-ext-recorder-shadow" style="top: 393px; left: 800px; height: 0px;"></div>
-        <div id="bukket-ext-recorder-shadow-bottom" class="bukket-ext-recorder-shadow" style="top: 393px;"></div>
-        <div id="bukket-ext-recorder-shadow-left" class="bukket-ext-recorder-shadow" style="top: 393px; width: 800px; height: 0px;"></div>
-        <div id="bukket-ext-recorder-target" style="width: 640px; height: 480px; left: 800px; top: 393px;">
-            <div id="bukket-ext-encoding-progress-bar"></div>
-            <div id="bukket-ext-recorder-controls-frame">
-                <div id="bukket-ext-recorder-close-button">×</div><span id="bukket-ext-recorder-button"><span id="bukket-ext-recorder-icon">●</span><span id="bukket-ext-recorder-button-label"> Start recording</span></span>
-                <span id="bukket-ext-recorder-duration">0:00</span>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="logo">
+            <a href="index.htm" title="tutorialspoint"></a>
+            <img src="images/logo.jpg" alt="book">
+          </h1>
+        </div>
+        <div class="col-md-8 text-right">
+          <div class="col-md-12">
+            <ul class="nav justify-content-end">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
             </div>
+          </nav>
         </div>
-    </div>
-    <div id="bukket-ext-invisible-layer" style="display: none; cursor: url(&quot;chrome-extension://bgkknpjjkdiodnjnkkabgnkfdhcokden/images/cursor-image.svg&quot;) 11 11, crosshair;">
-        <div id="bukket-ext-recorder-explanation-layer" style="cursor: url(&quot;chrome-extension://bgkknpjjkdiodnjnkkabgnkfdhcokden/images/cursor-image.svg&quot;) 11 11, crosshair; display: none;"><span>Click &amp; Drag to select recording area<br>Press <strong>Record</strong> or ⇧ + ⌥ + ⌘ + R<br>to start recording<br><br><br><br><small>Press Esc to cancel the recording</small></span></div>
-    </div>
-    <div id="bukket-ext-preview-layer" style="display: none;">
-        <div id="bukket-ext-preview-layer-image-container"><img id="bukket-ext-preview-layer-image" loop="infinite" data-bukket-ext-bukket-ext-opt-out="true">
-            <video id="bukket-ext-preview-layer-video" controls="" autoplay="" data-bukket-ext-bukket-ext-opt-out="true" style="display: none;"></video>
-        </div>
-        <div id="bukket-ext-preview-layer-close-button" style="top: 0px; left: 30px;">×</div><a id="bukket-ext-preview-layer-fullsize-button" href="#" target="_blank" style="top: -24px; left: 21px;">Click to view full size</a></div>
-    <div class="wrapLoader">
-        <div class="imgLoader">
-            <img src="/images/loading-cg.gif" alt="" width="70" height="70" draggable="true" data-bukket-ext-bukket-draggable="true">
-        </div>
-    </div>
-    <header>
-        <div class="container">
-            <h1 class="logo">
-                <a href="index.htm" title="tutorialspoint">
-          <img alt="tutorialspoint" src="/cakephp/images/logo.png" draggable="true" data-bukket-ext-bukket-draggable="true">
-          </a>
-            </h1>
-            <nav id="nav">
-                <ul>
-                    <li class="active" style="white-space: nowrap;"><a href="index.html">Homepage</a></li>
-                    <li style="white-space: nowrap;"><a href="left-sidebar.html">Left Sidebar</a></li>
-                    <li style="white-space: nowrap;"><a href="right-sidebar.html">Right Sidebar</a></li>
-                    <li style="white-space: nowrap;"><a href="no-sidebar.html">No Sidebar</a></li>
-                </ul>
-            </nav>
-        </div>
+      </div>
 
-        
-    </header>
-    <div style="clear:both;"></div>
-    <div role="main" class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <aside class="sidebar">
-                        <div class="mini-logo">
-                            <img src="/cakephp/images/cakephp-mini-logo.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
-                        </div>
-                        <ul class="nav nav-list primary left-menu">
-                            <li class="heading">CakePHP Tutorial</li>
-                            <li><a href="/cakephp/index.htm" style="background-color: rgb(214, 214, 214);">CakePHP - Home</a></li>
-                            <li><a href="/cakephp/cakephp_overview.htm">CakePHP - Overview</a></li>
-                            <li><a href="/cakephp/cakephp_installation.htm">CakePHP - Installation</a></li>
-                            <li><a href="/cakephp/cakephp_folder_structure.htm">CakePHP - Folder Structure</a></li>
-                            <li><a href="/cakephp/cakephp_configuration.htm">CakePHP - Configuration</a></li>
-                            <li><a href="/cakephp/cakephp_email_configuration.htm">CakePHP - Email Configuration</a></li>
-                            <li><a href="/cakephp/cakephp_routing.htm">CakePHP - Routing</a></li>
-                            <li><a href="/cakephp/cakephp_generating_urls.htm">CakePHP - Generating Urls</a></li>
-                            <li><a href="/cakephp/cakephp_redirect_routing.htm">CakePHP - Redirect Routing</a></li>
-                            <li><a href="/cakephp/cakephp_controllers.htm">CakePHP - Controllers</a></li>
-                            <li><a href="/cakephp/cakephp_views.htm">CakePHP - Views</a></li>
-                            <li><a href="/cakephp/cakephp_extending_views.htm">CakePHP - Extending Views</a></li>
-                            <li><a href="/cakephp/cakephp_view_elements.htm">CakePHP - View Elements</a></li>
-                            <li><a href="/cakephp/cakephp_view_events.htm">CakePHP - View Events</a></li>
-                            <li><a href="/cakephp/cakephp_working_with_database.htm">CakePHP - Working with Database</a></li>
-                            <li><a href="/cakephp/cakephp_view_a_record.htm">CakePHP - View a Record</a></li>
-                            <li><a href="/cakephp/cakephp_update_a_record.htm">CakePHP - Update a Record</a></li>
-                            <li><a href="/cakephp/cakephp_delete_a_record.htm">CakePHP - Delete a Record</a></li>
-                            <li><a href="/cakephp/cakephp_services.htm">CakePHP - Services</a></li>
-                            <li><a href="/cakephp/cakephp_errors_exception_handling.htm">Errors &amp; Exception Handling</a></li>
-                            <li><a href="/cakephp/cakephp_logging.htm">CakePHP - Logging</a></li>
-                            <li><a href="/cakephp/cakephp_form_handling.htm">CakePHP - Form Handling</a></li>
-                            <li><a href="/cakephp/cakephp_internationalization.htm">CakePHP - Internationalization</a></li>
-                            <li><a href="/cakephp/cakephp_session_management.htm">CakePHP - Session Management</a></li>
-                            <li><a href="/cakephp/cakephp_cookie_management.htm">CakePHP - Cookie Management</a></li>
-                            <li><a href="/cakephp/cakephp_security.htm">CakePHP - Security</a></li>
-                            <li><a href="/cakephp/cakephp_validation.htm">CakePHP - Validation</a></li>
-                            <li><a href="/cakephp/cakephp_creating_validators.htm">CakePHP - Creating Validators</a></li>
-                            <li class="heading">CakePHP Useful Resources</li>
-                            <li><a href="/cakephp/cakephp_quick_guide.htm">CakePHP - Quick Guide</a></li>
-                            <li><a href="/cakephp/cakephp_useful_resources.htm">CakePHP - Useful Resources</a></li>
-                            <li><a href="/cakephp/cakephp_discussion.htm">CakePHP - Discussion</a></li>
-                        </ul>
-                        <ul class="nav nav-list primary push-bottom left-menu special">
-                            <li class="sreading">Selected Reading</li>
-                            <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li>
-                            <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li>
-                            <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li>
-                            <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li>
-                            <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li>
-                            <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li>
-                        </ul>
-                    </aside>
-                </div>
-                <!-- PRINTING STARTS HERE -->
-                <div class="row">
-                    <div class="content">
-                        <div class="col-md-7 middle-col" style="height: 1171px;">
-                            <div class="cover">
-                                <img class="img-responsive" src="/cakephp/images/cakephp.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
-                            </div>
-                            <hr>
-                            <div class="pre-btn">
-                                <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
-                            </div>
-                            <div class="nxt-btn">
-                                <a href="/cakephp/cakephp_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
-                            </div>
-                            <div class="clearer"></div>
-                            <hr>
-                            <h1>CakePHP Tutorial</h1>
-                            <div class="center-aligned tutorial-menu">
-                                <form action="/job_search.php" method="POST">
-                                    <input type="hidden" name="search_string" value="CakePHP">
-                                    <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i><a href="/cakephp/cakephp_pdf_version.htm"> PDF Version</a></button>
-                                    <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/cakephp/cakephp_quick_guide.htm"> Quick Guide</a></button>
-                                    <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i><a href="/cakephp/cakephp_useful_resources.htm"> Resources</a></button>
-                                    <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button>
-                                    <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="fa fa-wechat"></i><a href="/cakephp/cakephp_discussion.htm"> Discussion</a></button>
-                                </form>
-                            </div>
-                            <p>CakePHP is an open-source framework for PHP. It is intended to make developing, deploying and
-                                maintaining applications much easier. CakePHP is based on an MVC-like architecture that is
-                                both powerful and easy to grasp. Models, Views, and Controllers guarantee a strict but natural
-                                separation of business logic from data and presentation layers.</p>
-                            <h1>Audience</h1>
-                            <p>This tutorial is meant for web developers and students who would like to learn how to develop
-                                websites using CakePHP. It will provide a good understanding of how to use this framework.</p>
-                            <h1>Prerequisites</h1>
-                            <p>Before you proceed with this tutorial, we assume that you have knowledge of HTML, Core PHP, and
-                                Advance PHP. We have used CakePHP version 3.2.7 in all the examples.</p>
-                            <hr>
-                            <div class="pre-btn">
-                                <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
-                            </div>
-                            <div class="print-btn center">
-                                <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
-                            </div>
-                            <div class="nxt-btn">
-                                <a href="/cakephp/cakephp_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
-                            </div>
-                            <hr>
-                            <!-- PRINTING ENDS HERE -->
-                            <div class="bottomgooglead">
-                                <div class="bottomadtag">Advertisements</div>
-                                <!-- /60931893/tutorial_bottom_leader_board -->
-                                <div id="div-gpt-ad-1510138782906-3" data-google-query-id="CKTYtL-SrtgCFUYQaAodyb4Cmg">
-                                    <script>
-                                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1510138782906-3'); });
-                                    </script>
-                                    <div id="google_ads_iframe_/60931893/tutorial_bottom_leader_board_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;">
-                                        <iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_bottom_leader_board_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                    <div id="google_ads_iframe_/60931893/tutorial_bottom_leader_board_0__container__" style="border: 0pt none; display: inline-block; width: 336px; height: 280px;">
-                                        <iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_bottom_leader_board_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="336" height="280" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3" id="rightbar">
-                            <div class="simple-ad">
-                                <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/cakephp/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
-    <img src="/images/facebookIcon.jpg" alt="img" draggable="true" data-bukket-ext-bukket-draggable="true">
-    </a>
-                                <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?url=' + 'http://www.tutorialspoint.com/cakephp/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
-    <img src="/images/twitterIcon.jpg" alt="img" draggable="true" data-bukket-ext-bukket-draggable="true">
-    </a>
-                                <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/cakephp/&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
-    <img src="/images/linkedinIcon.jpg" alt="img" draggable="true" data-bukket-ext-bukket-draggable="true">
-    </a>
-                                <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/cakephp/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
-    <img src="/images/googlePlusIcon.jpg" alt="img" draggable="true" data-bukket-ext-bukket-draggable="true">
-    </a>
-                                <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/cakephp/&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
-    <img src="/images/StumbleUponIcon.jpg" alt="img" draggable="true" data-bukket-ext-bukket-draggable="true">
-    </a>
-                                <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://reddit.com/submit?url=http://www.tutorialspoint.com/cakephp/&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;">
-    <img src="/images/reddit.jpg" alt="img" draggable="true" data-bukket-ext-bukket-draggable="true">
-    </a>
-                            </div>
-                            <div class="rightgooglead">
-                                <!-- /60931893/tutorial_right_top -->
-                                <div id="div-gpt-ad-1510138782906-2" style="height:250px; width:300px;" data-google-query-id="CI7PtL-SrtgCFUMPaAodZEEGdA">
-                                    <script>
-                                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1510138782906-2'); });
-                                    </script>
-                                    <div id="google_ads_iframe_/60931893/tutorial_right_top_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;">
-                                        <iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_right_top_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                    <div id="google_ads_iframe_/60931893/tutorial_right_top_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;">
-                                        <iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_right_top_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rightgooglead">
-                                <!-- /60931893/tutorial_right_middle -->
-                                <div id="div-gpt-ad-1510138782906-1" data-google-query-id="CIrJtL-SrtgCFQiJaAodBDUObA">
-                                    <script>
-                                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1510138782906-1'); });
-                                    </script>
-                                    <div id="google_ads_iframe_/60931893/tutorial_right_middle_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
-                                        <iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_right_middle_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                    <div id="google_ads_iframe_/60931893/tutorial_right_middle_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
-                                        <iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_right_middle_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rightgooglead">
-                                <!-- /60931893/tutorial_right_bottom -->
-                                <div id="div-gpt-ad-1510138782906-0" data-google-query-id="CJjttPSAyOjPkwEVXWSfsB0dfwAA">
-                                    <script>
-                                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1510138782906-0'); });
-                                    </script>
-                                    <div id="google_ads_iframe_/60931893/tutorial_right_bottom_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
-                                        <iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_right_bottom_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                    <div id="google_ads_iframe_/60931893/tutorial_right_bottom_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
-                                        <iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_right_bottom_0"
-                                            title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0"
-                                            width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                                            style="border: 0px; vertical-align: bottom;"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  </header>
+  <div class="container main">
+    <div class="row">
+      <div class="col-2 left-manu">
+        <aside class="sidebar">
+          <div class="mini-logo">
+            <img src="/cakephp/images/cakephp-mini-logo.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
+          </div>
+          <ul class="nav nav-list primary left-menu">
+            <li class="heading">CakePHP Tutorial</li>
+            <li>
+              <a href="/cakephp/index.htm" style="background-color: rgb(214, 214, 214);">CakePHP - Home</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_overview.htm">CakePHP - Overview</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_installation.htm">CakePHP - Installation</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_folder_structure.htm">CakePHP - Folder Structure</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_configuration.htm">CakePHP - Configuration</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_email_configuration.htm">CakePHP - Email Configuration</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_routing.htm">CakePHP - Routing</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_generating_urls.htm">CakePHP - Generating Urls</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_redirect_routing.htm">CakePHP - Redirect Routing</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_controllers.htm">CakePHP - Controllers</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_views.htm">CakePHP - Views</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_extending_views.htm">CakePHP - Extending Views</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_view_elements.htm">CakePHP - View Elements</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_view_events.htm">CakePHP - View Events</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_working_with_database.htm">CakePHP - Working with Database</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_view_a_record.htm">CakePHP - View a Record</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_update_a_record.htm">CakePHP - Update a Record</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_delete_a_record.htm">CakePHP - Delete a Record</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_services.htm">CakePHP - Services</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_errors_exception_handling.htm">Errors &amp; Exception Handling</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_logging.htm">CakePHP - Logging</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_form_handling.htm">CakePHP - Form Handling</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_internationalization.htm">CakePHP - Internationalization</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_session_management.htm">CakePHP - Session Management</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_cookie_management.htm">CakePHP - Cookie Management</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_security.htm">CakePHP - Security</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_validation.htm">CakePHP - Validation</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_creating_validators.htm">CakePHP - Creating Validators</a>
+            </li>
+            <li class="heading">CakePHP Useful Resources</li>
+            <li>
+              <a href="/cakephp/cakephp_quick_guide.htm">CakePHP - Quick Guide</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_useful_resources.htm">CakePHP - Useful Resources</a>
+            </li>
+            <li>
+              <a href="/cakephp/cakephp_discussion.htm">CakePHP - Discussion</a>
+            </li>
+          </ul>
+          <ul class="nav nav-list primary push-bottom left-menu special">
+            <li class="sreading">Selected Reading</li>
+            <li>
+              <a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a>
+            </li>
+            <li>
+              <a target="_top" href="/questions_and_answers.htm">Questions and Answers</a>
+            </li>
+            <li>
+              <a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a>
+            </li>
+            <li>
+              <a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a>
+            </li>
+            <li>
+              <a target="_top" href="/computer_glossary.htm">Computer Glossary</a>
+            </li>
+            <li>
+              <a target="_top" href="/computer_whoiswho.htm">Who is Who</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col-8 content">
+        <div class="" style="height: 1610px;">
+          <div class="cover">
+            <img class="img-responsive" src="/cakephp/images/cakephp.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
+          </div>
+          <hr>
+          <div class="">
+            <div class="float-left">
+                <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                        Previous Page
+                      </a>
+                    </li>
+                    </ul>
             </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-1">
-                        <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png" draggable="true" data-bukket-ext-bukket-draggable="true"> </a>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <nav id="sub-menu">
-                            <ul>
-                                <li><a href="/about/tutorials_writing.htm">Write for us</a></li>
-                                <li><a href="/about/faq.htm">FAQ's</a></li>
-                                <li><a href="/about/about_helping.htm">Helping</a></li>
-                                <li><a href="/about/contact_us.htm">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <p>© Copyright 2017. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="news-group">
-                            <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter"
-                                onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}">
-                            <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
-                            <div id="newsresponse"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="float-right">
+                <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        Next Page
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                    </ul>
             </div>
+          </div>
+          
+          <div class="col-12 row">
+          <h1 class="col-12 text-center">CakePHP Tutorial</h1>
         </div>
+          
+          <p>CakePHP is an open-source framework for PHP. It is intended to make developing, deploying and maintaining applications
+            much easier. CakePHP is based on an MVC-like architecture that is both powerful and easy to grasp. Models, Views,
+            and Controllers guarantee a strict but natural separation of business logic from data and presentation layers.</p>
+          <h1>Audience</h1>
+          <p>This tutorial is meant for web developers and students who would like to learn how to develop websites using CakePHP.
+            It will provide a good understanding of how to use this framework.</p>
+          <h1>Prerequisites</h1>
+          <p>Before you proceed with this tutorial, we assume that you have knowledge of HTML, Core PHP, and Advance PHP. We
+            have used CakePHP version 3.2.7 in all the examples.</p>
+          <hr>
+          <div class="pre-btn">
+            <a href="/index.htm">
+              <i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+          </div>
+          <div class="print-btn center">
+            <a href="/cgi-bin/printpage.cgi" target="_blank">
+              <i class="icon icon-print big-font"></i> Print</a>
+          </div>
+          <div class="nxt-btn">
+            <a href="/cakephp/cakephp_overview.htm">Next Page
+              <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+          </div>
+          <hr>
+          <!-- PRINTING ENDS HERE -->
+          <div class="bottomgooglead">
+            <div class="bottomadtag">Advertisements</div>
+            <!-- /60931893/tutorial_bottom_leader_board -->
+            <div id="div-gpt-ad-1510138782906-3" data-google-query-id="CK6ekriSuNgCFQFRjgodj9AGPg">
+              <script>
+                googletag.cmd.push(function () { googletag.display('div-gpt-ad-1510138782906-3'); });
+              </script>
+              <div id="google_ads_iframe_/60931893/tutorial_bottom_leader_board_0__container__" style="border: 0pt none; display: inline-block; width: 336px; height: 280px;">
+                <iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-14/html/container.html" id="google_ads_iframe_/60931893/tutorial_bottom_leader_board_0"
+                  title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="336" height="280"
+                  data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                  style="border: 0px; vertical-align: bottom;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 right-manu"></div>
     </div>
-    <a class="scroll-to-top visible" href="#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a><a class="scroll-to-top"
-        href="#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
-    <div id="bukket-ext-sidebar" class="closed">
-        <div id="bukket-ext-scrollview" class="bukket-ext-scrollview" data-bukket-ext-original-height="calc(100% - 433px)" style="height: calc(100% - 72px); display: none;">
-            <div id="bukket-ext-title">
-                <h1 class="bukket-ext-title-label"><span class="bukket-ext-screenshots-count">0</span> Item<span class="bukket-ext-screenshots-count-plural"></span>                    <span id="bukket-ext-clear-all-button">(Clear all)</span></h1>
-            </div>
-            <div id="bukket-ext-images-drop-area"><span class="plus-icon">+</span> Drop the image to add it</div>
-            <div id="bukket-ext-loading-icon-div" style="display: none;"><img id="bukket-ext-loading-icon" src="chrome-extension://bgkknpjjkdiodnjnkkabgnkfdhcokden/images/loading@2x.png"
-                    draggable="true" data-bukket-ext-bukket-draggable="true"></div>
-            <div id="bukket-ext-images"></div>
-            <div class="bukket-ext-clear"></div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          <a href="index.htm" class="logo">
+            <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png" draggable="true" data-bukket-ext-bukket-draggable="true"> </a>
         </div>
-        <div class="bukket-ext-close-button">×</div><a href="#" id="bukket-ext-save-button" class="bukket-ext-save-button" style="display: none;">Save</a>
-        <div>
-            <div id="bukket-ext-sidebar-beta-form" class="bukket-ext-sidebar-beta-form" style="display: none;">
-                <div id="bukket-ext-sidebar-beta-form-minimize-button" style="display: block;">–</div><span id="bukket-ext-sidebar-window-title" style="display: none;">Join our BukketApp Cloud Beta Program</span>
-                <div class="bukket-ext-beta-form-content open">
-                    <h1>Bukket App goes Cloud!</h1>
-                    <h2>Be more organised</h2>
-                    <hr>
-                    <p>Access all your design files anywhere, all in one place.</p>
-                    <h2>Sign up for Beta</h2><input id="bukket-ext-beta-form-name" name="FNAME" type="text" placeholder="First name">
-                    <input id="bukket-ext-beta-form-email" name="EMAIL" type="email" placeholder="Email">
-                    <div class="submit">Sign up</div>
-                </div>
-            </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <nav id="sub-menu">
+            <ul>
+              <li>
+                <a href="/about/tutorials_writing.htm">Write for us</a>
+              </li>
+              <li>
+                <a href="/about/faq.htm">FAQ's</a>
+              </li>
+              <li>
+                <a href="/about/about_helping.htm">Helping</a>
+              </li>
+              <li>
+                <a href="/about/contact_us.htm">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div id="bukket-ext-sidebar-footer" style="display: none;"><a id="bukket-ext-sidebar-twitter-link" class="left" href="https://www.twitter.com/bukketapp" target="_blank"><img src="chrome-extension://bgkknpjjkdiodnjnkkabgnkfdhcokden/images/icon-twitter-gray.svg" class="left" draggable="true" data-bukket-ext-bukket-draggable="true"><span class="left">@Bukketapp</span></a>
-            <a id="bukket-ext-sidebar-bug-report-link" class="right ext-link" href="mailto:hi@bukketapp.com">Report bugs</a>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <p>© Copyright 2017. All Rights Reserved.</p>
         </div>
-        <div id="bukket-ext-sidebar-share-div" style="height: auto; opacity: 1;">
-            <h1>Wasn't that easy!</h1>
-            <p>At Bukket, we're working hard to make the designer processes simpler.</p>
-            <h2>Tell your friends about us</h2>
-            <div id="bukket-ext-sidebar-share-twitter"><img src="chrome-extension://bgkknpjjkdiodnjnkkabgnkfdhcokden/images/icon-twitter.svg" draggable="true" data-bukket-ext-bukket-draggable="true">                Share</div>
-            <div id="bukket-ext-sidebar-share-fb"><img src="chrome-extension://bgkknpjjkdiodnjnkkabgnkfdhcokden/images/icon-facebook.svg" draggable="true" data-bukket-ext-bukket-draggable="true">                Share</div>
-            <div id="bukket-ext-sidebar-back">Back to home</div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <div class="news-group">
+            <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter"
+              onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}">
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button>
+            </span>
+            <div id="newsresponse"></div>
+          </div>
         </div>
+      </div>
     </div>
+  </footer>
 
-
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
