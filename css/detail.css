@@ -10,5 +10,6 @@ header div{
 }
 .content {
     border-left: 1pt solid rgba(0,0,0,.1);
+    border-right: 1pt solid rgba(0,0,0,.1);
     
 }
