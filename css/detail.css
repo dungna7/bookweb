@@ -1,14 +1,38 @@
-body {
-    background: #eeeeee;
-}
-.container {
+
+.body {
     background: #fff;
 }
 
-header div{
-    background: #aeeae2;
-}
 .content {
     border-left: 1pt solid rgba(0,0,0,.1);
     border-right: 1pt solid rgba(0,0,0,.1);
+}
+a.nav-link {
+    color: #fff !important;
+}
+.navbar-expand-lg{
+    padding: 0px;
+}
+.justify-content-end{
+    padding-top: 3px;
+}
+header {
+    height: 40px;
+    background: #3661b7;
+}
+.navbar-nav{
+    background: #3661b7;
+}
+.breadcrumb {
+    background-color: #ffffff;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+.mini-logo img{
+    max-width: 100%;
+}
+@media (max-width: 992px){
+    .mini-logo {
+        display: none;
+    }
 }
