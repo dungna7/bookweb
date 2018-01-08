@@ -36,3 +36,15 @@ header {
         display: none;
     }
 }
+.card {
+    margin-bottom: 15px !important;
+}
+footer{
+    height: 80px;
+    background: #3661b7;
+}
+@media (max-width: 530px){
+    .Copyright {
+        display: none;
+    }
+}
