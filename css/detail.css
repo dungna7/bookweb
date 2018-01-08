@@ -1,6 +1,7 @@
 
 .body {
     background: #fff;
+    margin-top: 40px;
 }
 
 .content {
@@ -17,8 +18,10 @@ a.nav-link {
     padding-top: 3px;
 }
 header {
-    height: 40px;
     background: #3661b7;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
 }
 .navbar-nav{
     background: #3661b7;
