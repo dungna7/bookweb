@@ -7,9 +7,3 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-function closeNavBar() {
-    var W = window.innerWidth;
-    if (W < 576) {
-        $(".navbar-nav li").not(":first").hide();
-    }
-}

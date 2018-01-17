@@ -12,31 +12,39 @@
 </head>
 
 <body>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-        <a class="navbar-brand text-white" href="#"></a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Disabled</a>
-            </li>
-        </ul>
-    </div>
     <header>
         <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-primary py-0 pr-0">
             <div class="col-lg-9 row pr-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler my-auto" type="button" onclick="openNav()" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"> Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                </div>
                 <div class="collapse navbar-collapse" id="">
                     <a class="navbar-brand text-white" href="#"></a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"> Dropdown
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -58,57 +66,35 @@
                     <ul class="nav justify-content-end">
                         <li class="nav-item active">
                             <a class="nav-link text-white" href="#">
-                            <i class="fas fa-bell"></i>
-                            <span class="sr-only">(current)</span>
-                        </a>
+                                <i class="fas fa-bell "></i>
+                                <span class="sr-only">(current)</span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">
-                            <i class="fas fa-cogs"></i>
-                        </a>
+                                <i class="fas fa-cogs"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">
-                            <i class="fas fa-user"></i>
-                        </a>
+                                <i class="fas fa-user"></i>
+                            </a>
                         </li>
 
                     </ul>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container-fluid body">
+    <div class="container-fluid body py-2">
         <div class="main row">
-            <div class="col-lg-2 col-sm-12">
-
-                <div class="mini-logo">
-                    <h1>
-                        <a href="">
-                            <img src="images/share.png" alt="">
-                        </a>
-                    </h1>
-                </div>
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
-                    </div>
-                    <div class="collapse navbar-collapse sidenav" id="navbarNav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
-                        <ul class="nav flex-column">
+            <div class="col-lg-2 col-sm-12 br-1">
+                <div class="aside mini-logo">
+                    <aside class="sidebar">
+                        <div class="">
+                            <img src="images/minano1.jpg" alt="CakePHP Tutorial" draggable="true" data-bukket-ext-bukket-draggable="true">
+                        </div>
+                        <ul class="nav nav-list primary left-menu" id="sidebar">
                             <li>
                                 <a href="/minano1/1">CakePHP - Home</a>
                             </li>
@@ -146,14 +132,31 @@
                                 <a href="/minano1/12">CakePHP - Extending Views</a>
                             </li>
 
+                            <li>
+                                <a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a>
+                            </li>
+                            <li>
+                                <a target="_top" href="/questions_and_answers.htm">Questions and Answers</a>
+                            </li>
+                            <li>
+                                <a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a>
+                            </li>
+                            <li>
+                                <a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a>
+                            </li>
+                            <li>
+                                <a target="_top" href="/computer_glossary.htm">Computer Glossary</a>
+                            </li>
+                            <li>
+                                <a target="_top" href="/computer_whoiswho.htm">Who is Who</a>
+                            </li>
                         </ul>
-                    </div>
-                </nav>
-
+                    </aside>
+                </div>
             </div>
             <div class="col-lg-7 col-sm-12 content">
-
-                <div class="container-fluid">
+                <div class="container-fluid advertisements"></div>
+                <div class="container-fluid row">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
@@ -164,72 +167,101 @@
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">Data</li>
                         </ol>
+
                     </nav>
-                    <hr>
-                </div>
-                <div class="container-fluid">
-                    <div class="card-deck">
-                        <div class="card">
-                            <img class="card-img-top" src="images/minano2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer text-center py-0">
-                                <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="images/minano2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer text-center py-0">
-                                <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="images/minano2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer text-center py-0">
-                                <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
-                            </div>
+                    <div class="dropdown my-auto" id="aside-dropdown">
+                        <a class="exspan-icon" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus-circle text-info" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div>
-                    <div class="card-deck">
-                        <div class="card">
-                            <img class="card-img-top" src="images/minano2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer text-center py-0">
-                                <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
-                            </div>
+
+                </div>
+                <hr class="my-2">
+                <div class="container-fluid row pr-0">
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
                         </div>
-                        <div class="card">
-                            <img class="card-img-top" src="images/minano2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer text-center py-0">
-                                <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
-                            </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
                         </div>
-                        <div class="card">
-                            <img class="card-img-top" src="images/minano2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer text-center py-0">
-                                <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
-                            </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-3">
+                        <img class="card-img-top mt-2" src="images/minano2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer text-center py-0">
+                            <button type="button" class="btn btn-outline-danger border-0">Detail view</button>
                         </div>
                     </div>
                 </div>
@@ -261,8 +293,9 @@
                         </ul>
                     </nav>
                 </div>
+                <div class="container-fluid advertisements"></div>
             </div>
-            <div class="col-lg-3 col-sm-12"></div>
+            <div class="col-lg-3 col-sm-12 bl-1"></div>
         </div>
     </div>
     <footer class="container-fluid">
